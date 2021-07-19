@@ -1,11 +1,12 @@
-
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import Map from './components/Map'
 
 function App() {
   return (
     <div>
-      <p>test</p>
+      <Map>
+      </Map>
     </div>
   );
 }
-
 export default App;
