@@ -3,14 +3,17 @@ import React, { Component } from 'react'
 import LocationMarker from './LocationMarker'
 import sightData from '../sightingData.json'
 
+
 class Map extends Component {
+
     static defaultProps = {
         center: {
             lat: 39.8283,
             lng: -98.5795
-        },
+         },
         zoom: 3
     };
+
 
 render() {
     return (
