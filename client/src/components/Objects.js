@@ -24,3 +24,10 @@ export const headerbackground = `
         }
     }
 `;
+
+// Resposive Nav
+export const navOptions = {
+  desktop: "topnav",
+  mobile: "topnav responsive",
+  none: "#mobile",
+};
