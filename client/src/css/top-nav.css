@@ -1,3 +1,7 @@
+:root {
+  --primary-fonts: "Open Sans", sans-serif;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -13,7 +17,7 @@ a:hover {
 .topnav a {
   float: left;
   display: block;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-fonts);
   color: #000000;
   text-align: center;
   text-decoration: none;
@@ -52,7 +56,7 @@ a:hover {
 .dropdown .dropbtn {
   border: none;
   outline: none;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-fonts);
   color: #000000;
   background-color: #ffffff;
   font-size: 18px;
@@ -72,7 +76,7 @@ a:hover {
 .topnav .dropdown-content .inactiveLink {
   pointer-events: none;
   cursor: default;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-fonts);
   color: #000000;
   padding: 16px 0px;
   display: none;
@@ -80,7 +84,7 @@ a:hover {
 
 .dropdown-content .subNav {
   float: left;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--primary-fonts);
   font-size: 21px;
   color: #54565b;
   padding: 0px 10px;
@@ -234,9 +238,9 @@ a:hover {
   /* Add a black background color to the top navigation */
   .topnav {
     background-color: rgba(255, 255, 255, 0);
-    width: 640px;
+    width: 100%;
     margin: 0 auto 0px auto;
-    padding: 100px 0px 0px 0px;
+    padding: 0px 0px 0px 100px;
   }
 
   /* Styles None Dropdown links*/
