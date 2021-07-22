@@ -1,9 +1,3 @@
-:root {
-  --bg-color: #2c2c2c;
-  --primary-fonts: "Open Sans", sans-serif;
-  --text-color: #b9b9b9;
-}
-
 /* footer */
 .footer {
   background-color: var(--bg-color);

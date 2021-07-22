@@ -17,20 +17,17 @@ export default function Navtop() {
 
   return (
     <nav className={desktopNav} id="myTopnav">
-      <a href={navOptions.none} className="active">
-        <img src="images/header/abduction-tablet.gif" alt="test" />
+      <a href={navOptions.none}>
+        <img
+          src="images/nav/top/nav-logo.png"
+          alt="Database Of Unidentified Flying Object Sightings"
+        />
       </a>
       <a className="navBar" href="#test">
-        Test
+        Info
       </a>
       <a className="navBar" href="#test">
-        Test
-      </a>
-      <a className="navBar" href="#test">
-        Test
-      </a>
-      <a className="navBar" href="#test">
-        Test
+        Sightings
       </a>
       <a href={navOptions.none} className="icon" onClick={handleOnClick}>
         &#9776;

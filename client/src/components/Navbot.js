@@ -10,7 +10,7 @@ export default function Navbot() {
         </p>
         <a href="#test">Home</a>
         <a href="#test">Info</a>
-        <a href="#test">Map</a>
+        <a href="#test">Sightings</a>
       </div>
       <div class="social">
         <p>
