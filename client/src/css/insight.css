@@ -1,0 +1,174 @@
+.insight-section {
+  display: block;
+  height: auto;
+  width: 100%;
+  min-height: 950px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px;
+  background-color: #161a1a;
+}
+
+.insight-text {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.insight-text h3 {
+  color: var(--mid-gray-color);
+  padding: 30px 90px 30px 90px;
+  text-align: center;
+  font-size: 55px;
+  letter-spacing: 0.06em;
+  font-family: var(--primary-fonts);
+  font-weight: 800px;
+}
+
+.insight-text p {
+  color: var(--text-color);
+  padding: 0px 35px 45px 35px;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 0.04em;
+  font-family: var(--primary-fonts);
+}
+
+.insight-image {
+  display: block;
+  width: 375px;
+  height: auto;
+  margin: 0px auto;
+  padding: 0px 0px 70px 0px;
+  text-align: center;
+}
+
+.insight-image img {
+  width: 360px;
+}
+
+@media only screen and (min-width: 400px) {
+  .insight-section {
+    min-height: 960px;
+  }
+
+  .insight-text h3 {
+    padding: 35px 90px 30px 90px;
+    font-size: 60px;
+  }
+
+  .insight-text p {
+    padding: 0px 45px 60px 45px;
+    font-size: 22px;
+  }
+
+  .insight-image {
+    display: block;
+    width: 400px;
+    height: auto;
+    padding: 0px 0px 70px 0px;
+    margin: 0px auto;
+  }
+
+  .insight-image img {
+    width: 380px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .insight-section {
+    display: block;
+    height: auto;
+    min-height: 1160px;
+  }
+
+  .insight-text {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .insight-text h3 {
+    padding: 40px 100px 30px 100px;
+    font-size: 70px;
+  }
+
+  .insight-text p {
+    padding: 0px 50px 70px 50px;
+    font-size: 30px;
+  }
+
+  .insight-image {
+    width: 600px;
+  }
+
+  .insight-image img {
+    width: 550px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .insight-text h3 {
+    padding: 50px 100px 30px 100px;
+    font-size: 70px;
+  }
+
+  .insight-text p {
+    padding: 0px 100px 100px 100px;
+    font-size: 30px;
+  }
+
+  .insight-image {
+    width: 700px;
+    padding: 0px 0px 70px 0px;
+  }
+
+  .insight-image img {
+    width: 700px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .insight-text {
+    height: 610px;
+  }
+
+  .insight-image {
+    width: 800px;
+    height: 550px;
+    padding: 30px 0px 30px 0px;
+  }
+
+  .insight-image img {
+    width: 800px;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  .insight-section {
+    height: 70%;
+    min-height: 80vh;
+    max-height: 900px;
+  }
+
+  .insight-text {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+  }
+
+  .insight-text h3 {
+    padding: 50px 0px 30px 100px;
+    font-size: 70px;
+  }
+
+  .insight-text p {
+    padding: 0px 0px 0px 100px;
+    font-size: 30px;
+  }
+
+  .insight-image {
+    display: inline-block;
+    width: 49%;
+    padding: 40px 0px 0px 0px;
+  }
+}
