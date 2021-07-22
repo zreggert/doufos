@@ -15,19 +15,21 @@
 }
 
 .insight-text h3 {
-  color: #4c44dd;
+  color: var(--mid-gray-color);
   padding: 30px 90px 30px 90px;
   text-align: center;
   font-size: 55px;
+  letter-spacing: 0.06em;
   font-family: var(--primary-fonts);
   font-weight: 800px;
 }
 
 .insight-text p {
-  color: #3c83fd;
+  color: var(--text-color);
   padding: 0px 35px 45px 35px;
   text-align: center;
   font-size: 22px;
+  letter-spacing: 0.04em;
   font-family: var(--primary-fonts);
 }
 
@@ -144,8 +146,8 @@
 @media only screen and (min-width: 1824px) {
   .insight-section {
     height: 70%;
-    min-height: 600px;
-    max-height: 800px;
+    min-height: 80vh;
+    max-height: 900px;
   }
 
   .insight-text {
