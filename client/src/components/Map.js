@@ -1,25 +1,39 @@
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import GoogleMapReact from 'google-map-react'
 import React, { Component } from 'react'
-// import './myMap.css'
-// import sightingData from './new_NUFORC_edited'
-export class myMap extends Component {
-  render() {
-    return (
-      <div className='mapWrap'>
-        <Map className='myMap'
-          google={this.props.google}
-          zoom={8}
-          initialCenter={{ 
-            lat: 39.8283, 
+import LocationMarker from './LocationMarker'
+import sightData from '../sightingData.json'
+
+
+class Map extends Component {
+
+    static defaultProps = {
+        center: {
+            lat: 39.8283,
             lng: -98.5795
-          }}
-        >
-          <Marker position={{lat: 39.8283, lng: -98.5795}} />
-        </Map>
-      </div>
-    );
-  }
+         },
+        zoom: 3
+    };
+
+
+render() {
+    return (
+        <div style={{ height:'80vh', width: '100%'}}>
+            <GoogleMapReact
+                bootstrapURLKeys={{ key:'AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo'}} //need to hide key in .env file.
+                defaultCenter= {this.props.center }
+                defaultZoom={this.props.zoom}
+            > 
+                {sightData.sighting.map(location => (
+                  <LocationMarker 
+                    key={location.id}
+                    lat={location.latitude}
+                    lng={location.longitude}
+                    />
+                ))}
+            </GoogleMapReact>
+        </div>
+        )
+    }
 }
-  export default GoogleApiWrapper({ 
-    apiKey: 'AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo'
-  })(myMap)
+
+export default Map;
