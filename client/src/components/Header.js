@@ -1,3 +1,4 @@
+// Importing a CSS file
 import "../css/header.css";
 
 export default function Header() {
