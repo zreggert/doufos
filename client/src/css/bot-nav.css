@@ -1,0 +1,141 @@
+:root {
+  --primary-fonts: "Open Sans", sans-serif;
+  --mid-gray-color: #6d6d6d;
+  --yellow-color: #cfcb86;
+  --green-color: #86cf8b;
+}
+
+.botNav {
+  background-color: var(--mid-gray-color);
+}
+
+.bottomNav {
+  display: block;
+  overflow: hidden;
+  bottom: 0;
+  width: 100;
+  padding: 45px 0px;
+}
+
+.bottomNav p {
+  font-family: var(--primary-fonts);
+  font-size: 28px;
+  padding: 0px 20px 0px 50px;
+  width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.bottomNav a {
+  display: block;
+  color: var(--yellow-color);
+  font-family: var(--primary-fonts);
+  text-align: left;
+  padding: 10px 20px 10px 50px;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+/* Changes the color of links on hover */
+.bottomNav a:hover {
+  color: var(--green-color);
+}
+
+/* Added a color to the active/current link */
+.bottomNav a.active {
+  color: var(--green-color);
+}
+
+.social {
+  display: block;
+  width: 100%;
+  padding: 0px 0px 45px 50px;
+}
+
+.social p {
+  font-family: var(--primary-fonts);
+  font-size: 28px;
+  padding: 0px 0px 20px 0px;
+}
+
+.following {
+  color: var(--yellow-color);
+}
+
+/* Mobile devices (large Mobile phones, 600px to 767px) */
+@media only screen and (min-width: 600px) {
+  .bottomNav {
+    display: block;
+    width: 100%;
+    padding: 50px 0px;
+  }
+
+  .bottomNav p {
+    font-size: 30px;
+    padding: 0px 20px 0px 100px;
+    width: 100%;
+  }
+
+  /* Style the links inside the navigation bar */
+  .bottomNav a {
+    display: block;
+    text-align: left;
+    padding: 10px 20px 10px 100px;
+    font-size: 25px;
+  }
+
+  .social {
+    display: block;
+    width: 100%;
+    padding: 0px 0px 50px 100px;
+  }
+
+  .social p {
+    font-size: 30px;
+    padding: 0px 0px 20px 0px;
+  }
+}
+
+/* Medium devices (Ipad, 768px and 1023px) */
+@media only screen and (min-width: 768px) {
+  .bottomNav {
+    display: inline-block;
+    bottom: 0;
+    width: 40%;
+    padding: 50px 0px;
+  }
+
+  .bottomNav p {
+    padding: 0px 20px 0px 100px;
+  }
+
+  /* Style the links inside the navigation bar */
+  .bottomNav a {
+    display: block;
+    text-align: left;
+    padding: 10px 20px 10px 100px;
+    font-size: 25px;
+  }
+
+  .social {
+    display: inline-block;
+    width: 59%;
+    padding: 50px 0px;
+    vertical-align: top;
+  }
+
+  .social p {
+    padding: 0px 0px 20px 0px;
+  }
+}
+
+/* Desktops (Desktops, 1824px and up) */
+@media only screen and (min-width: 1824px) {
+  .bottomNav p {
+    padding: 0px 20px 0px 400px;
+  }
+
+  /* Style the links inside the navigation bar */
+  .bottomNav a {
+    padding: 10px 20px 10px 400px;
+  }
+}
