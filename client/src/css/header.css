@@ -50,7 +50,8 @@ li {
 /* Mobile devices (large Mobile phones, 600px to 767px) */
 @media only screen and (min-width: 600px) {
   li {
-    font-size: 30px;
+    font-size: 25px;
+    letter-spacing: 0.1em;
   }
 
   .userIcon {
