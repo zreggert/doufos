@@ -3,8 +3,8 @@ import "../css/bot-nav.css";
 
 export default function Navbot() {
   return (
-    <nav class="botNav">
-      <div class="bottomNav" id="bottomNav">
+    <nav className="botNav">
+      <div className="bottomNav" id="bottomNav">
         <p>
           <b>SITE MAP</b>
         </p>
@@ -12,11 +12,11 @@ export default function Navbot() {
         <a href="#test">Info</a>
         <a href="#test">Sightings</a>
       </div>
-      <div class="social">
+      <div className="social">
         <p>
           <b>SOCIAL</b>
         </p>
-        <p class="following">They're already following you!</p>
+        <p className="following">They're already following you!</p>
       </div>
     </nav>
   );

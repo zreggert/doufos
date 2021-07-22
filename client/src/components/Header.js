@@ -3,10 +3,10 @@ import "../css/header.css";
 
 export default function Header() {
   return (
-    <header class="user-section">
-      <ul class="ul-user-section">
-        <li class="login">Sign In</li>
-        <li class="joins">Join Us</li>
+    <header className="user-section">
+      <ul className="ul-user-section">
+        <li className="login">Sign In</li>
+        <li className="joins">Join Us</li>
       </ul>
     </header>
   );
