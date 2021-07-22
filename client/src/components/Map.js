@@ -17,7 +17,7 @@ class Map extends Component {
 
 render() {
     return (
-        <div style={{ height:'100vh', width: '100%'}}>
+        <div style={{ height:'80vh', width: '100%'}}>
             <GoogleMapReact
                 bootstrapURLKeys={{ key:'AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo'}} //need to hide key in .env file.
                 defaultCenter= {this.props.center }
