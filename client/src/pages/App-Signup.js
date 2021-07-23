@@ -8,7 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 // import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 // import Map from './components/Map'
-import Signup from './components/Signup';
+import Signup from '../components/Signup';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
