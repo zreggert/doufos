@@ -1,0 +1,45 @@
+/* footer */
+.footer {
+  background-color: var(--bg-color);
+  padding: 2px 3.5% 2px 3.5%;
+  font-family: var(--primary-fonts);
+  font-size: 15px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.footer p {
+  margin: 0px 0px;
+}
+
+/* Medium devices (large Mobile phones, 600px to 767px) */
+@media only screen and (min-width: 600px) {
+  /* footer */
+  .footer {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (Ipad, 768px and 1023px) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Medium devices (Ipad Pro 1024px and 1223px) */
+@media only screen and (min-width: 1024px) {
+  /* footer */
+  .footer {
+    font-size: 19px;
+  }
+}
+
+/* Medium devices (laptops, 1224px and 1823px) */
+@media only screen and (min-width: 1224px) {
+  /* footer */
+  .footer {
+    font-size: 20px;
+  }
+}
+
+/* Medium devices (Desktops, 1824px and up) */
+@media only screen and (min-width: 1824px) {
+}

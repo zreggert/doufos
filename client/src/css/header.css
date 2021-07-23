@@ -1,0 +1,60 @@
+.user-section {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px 25px 0px 0px;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  display: inline;
+  float: right;
+  padding: 10px 10px 10px 10px;
+}
+
+li {
+  display: block;
+  text-align: center;
+  font-family: var(--primary-fonts);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+.login {
+  color: var(--Links);
+  cursor: pointer;
+}
+
+.joins {
+  color: #979461;
+  cursor: pointer;
+}
+
+.logout {
+  color: #979461;
+  cursor: pointer;
+}
+
+.username {
+  color: #979461;
+  cursor: pointer;
+}
+
+.userIcon {
+  display: none;
+}
+
+/* Mobile devices (large Mobile phones, 600px to 767px) */
+@media only screen and (min-width: 600px) {
+  li {
+    font-size: 25px;
+    letter-spacing: 0.1em;
+  }
+
+  .userIcon {
+    display: block;
+  }
+}
