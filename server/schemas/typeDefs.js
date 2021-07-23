@@ -11,11 +11,11 @@ const typeDefs = gql`
 
     type Sighting {
         _id: ID
-        latitude: Number
-        longitude: Number
+        latitude: Float
+        longitude: Float
         city: String
         state: String
-        date_time: Date
+        date_time: String
         text: String
     }
 
@@ -34,7 +34,7 @@ const typeDefs = gql`
     type Mutation {
         addUser(name: String!, email: String!, password: String!): Auth
         login(email: String!, password: String!): Auth
-        addSighting(latitude: Integer, longitude: Integer, city: String, state: String, date_time: Date, text: String): Sighting
+        addSighting(latitude: Float, longitude: Float, city: String, state: String, date_time: String, text: String): Sighting
     }
 `;
 
