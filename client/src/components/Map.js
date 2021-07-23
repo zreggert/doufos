@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 import React, { Component } from "react";
 import LocationMarker from "./LocationMarker";
-import sightData from "../../../server/seeders/sightingData.json";
+// import sightData from "../../../server/seeders/sightingData.json";
 
 class Map extends Component {
   static defaultProps = {
