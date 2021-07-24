@@ -52,13 +52,13 @@ export default function App() {
           <style scoped>{headerbackground}</style>
           <div className="backimage background">
             <Header />
+            <Navtop />
             <Route exact path="/joinus">
               <Joinus />
             </Route>
             <Route exact path="/signin">
               <Map />
             </Route>
-            <Navtop />
             <Route exact path="/info">
               <Insight />
             </Route>
