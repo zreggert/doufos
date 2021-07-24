@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // Import CSS File Dependency
 import "../css/top-nav.css";
 // Import Objects
@@ -17,21 +18,25 @@ export default function Navtop() {
 
   return (
     <nav className={desktopNav} id="myTopnav">
-      <a href={navOptions.none}>
+      <Link className="linkstyles" to="/">
         <img
           src="images/nav/top/nav-logo.png"
           alt="Database Of Unidentified Flying Object Sightings"
         />
-      </a>
-      <a className="navBar" href="#test">
+      </Link>
+      <Link className="navBar linkstyles" to="/info">
         Info
-      </a>
-      <a className="navBar" href="#test">
+      </Link>
+      <Link className="navBar linkstyles" to="/map">
         Sightings
-      </a>
-      <a href={navOptions.none} className="icon" onClick={handleOnClick}>
+      </Link>
+      <Link
+        to={navOptions.none}
+        className="icon linkstyles"
+        onClick={handleOnClick}
+      >
         &#9776;
-      </a>
+      </Link>
     </nav>
   );
 }

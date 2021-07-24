@@ -1,4 +1,4 @@
-a:hover {
+.linkstyles:hover {
   cursor: pointer;
 }
 
@@ -10,7 +10,7 @@ a:hover {
 }
 
 /* Styles None Dropdown links*/
-.topnav a {
+.topnav .linkstyles {
   float: left;
   display: block;
   font-family: var(--primary-fonts);
@@ -96,13 +96,13 @@ a:hover {
 }
 
 /* Add a background on topnav links and the dropdown button on hover */
-.topnav a:hover,
+.topnav .linkstyles:hover,
 .dropdown:hover .dropbtn {
   color: var(--Links);
 }
 
 /* Add color background to dropdown links on hover */
-.dropdown-content a:hover {
+.dropdown-content .linkstyles:hover {
   background-color: #54565b;
   color: #000000;
 }
@@ -113,11 +113,11 @@ a:hover {
 }
 
 /* screen is 600 hide all links */
-.topnav a:not(:first-child),
+.topnav .linkstyles:not(:first-child),
 .dropdown .dropbtn {
   display: none;
 }
-.topnav a.icon {
+.topnav .linkstyles.icon {
   float: right;
   display: block;
 }
@@ -126,12 +126,12 @@ a:hover {
 .topnav.responsive {
   position: relative;
 }
-.topnav.responsive a.icon {
+.topnav.responsive .linkstyles.icon {
   position: absolute;
   right: 0;
   top: 0;
 }
-.topnav.responsive a {
+.topnav.responsive .linkstyles {
   float: none;
   display: block;
   text-align: center;
@@ -156,7 +156,7 @@ a:hover {
 /* Medium devices (Ipad, 768px and 1023px) */
 @media only screen and (min-width: 768px) {
   /* Styles None Dropdown links*/
-  .topnav a {
+  .topnav .linkstyles {
     font-size: 23px;
   }
 
@@ -209,11 +209,11 @@ a:hover {
 
 /* Medium devices (Desktop Breakpoitn 1224px and 1333px) */
 @media only screen and (min-width: 1224px) {
-  .topnav a:not(:first-child) {
+  .topnav .linkstyles:not(:first-child) {
     display: inline-block;
   }
 
-  .topnav a.icon {
+  .topnav .linkstyles.icon {
     display: none;
   }
 
@@ -227,7 +227,7 @@ a:hover {
   }
 
   /* Add a dark background on topnav links and the dropdown button on hover */
-  .topnav a:hover {
+  .topnav .linkstyles:hover {
     color: var(--green-color);
   }
 
@@ -240,7 +240,7 @@ a:hover {
   }
 
   /* Styles None Dropdown links*/
-  .topnav a {
+  .topnav .linkstyles {
     font-size: 25px;
     text-transform: uppercase;
     letter-spacing: 0.1em;

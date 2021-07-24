@@ -54,10 +54,10 @@ export default function App() {
           <div className="backimage background">
             <Header />
             <Navtop />
+            <Route exact path="/info">
+              <Insight />
+            </Route>
           </div>
-          <Route exact path="/info">
-            <Insight />
-          </Route>
           <Navbot />
           <Footer />
         </div>
