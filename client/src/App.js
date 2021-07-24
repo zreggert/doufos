@@ -9,13 +9,12 @@ import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Map from "./components/Map";
-import Home from "./pages/Home";
-import Info from "./pages/Info";
 import Footer from "./components/Footer";
 import Navbot from "./components/Navbot";
 import Navtop from "./components/Navtop";
 import Header from "./components/Header";
 import Insight from "./components/Insight";
+import Joinus from "./components/Signup";
 import { headerbackground } from "./components/Objects";
 // Importing a CSS file
 import "./css/landing.css";
@@ -53,9 +52,18 @@ export default function App() {
           <style scoped>{headerbackground}</style>
           <div className="backimage background">
             <Header />
+            <Route exact path="/joinus">
+              <Joinus />
+            </Route>
+            <Route exact path="/signin">
+              <Map />
+            </Route>
             <Navtop />
             <Route exact path="/info">
               <Insight />
+            </Route>
+            <Route exact path="/map">
+              <Map />
             </Route>
           </div>
           <Navbot />
