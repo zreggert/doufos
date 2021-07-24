@@ -29,5 +29,5 @@ export const headerbackground = `
 export const navOptions = {
   desktop: "topnav",
   mobile: "topnav responsive",
-  none: "#mobile",
+  none: "",
 };

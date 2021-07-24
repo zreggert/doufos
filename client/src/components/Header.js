@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom';
 // Importing a CSS file
 import "../css/header.css";
-import {Link} from 'react-router-dom';
+
 
 export default function Header() {
   return (

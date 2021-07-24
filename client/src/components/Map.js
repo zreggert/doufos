@@ -4,23 +4,17 @@ import LocationMarker from "./LocationMarker";
 import sightData from "./sightingData.json";
 
 class Map extends Component {
-  static defaultProps = {
-    center: {
-      lat: 39.8283,
-      lng: -98.5795,
-    },
-    zoom: 3,
-  };
-
   render() {
     return (
-      <div style={{ height: "80vh", width: "100%" }}>
+      <div
+        style={{ height: "80vh", width: "90vw", margin: "20px auto 20px auto" }}
+      >
         <GoogleMapReact
-          bootstrapURLKeys={{ key: "AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo" }} //need to hide key in .env file.
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
+          bootstrapURLKeys={{ key: "AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo" }}
+          defaultCenter={{ lat: 39.8283, lng: -98.5795 }}
+          defaultZoom={3}
         >
-          {sightData.sighting.map((location) => (
+          {sightData.map((location) => (
             <LocationMarker
               key={location.id}
               lat={location.latitude}
