@@ -234,6 +234,7 @@
     margin: 0 auto 0px auto;
     padding: 0px 0px 0px 100px;
     height: 12vh;
+    min-height: 115px;
   }
 
   /* Styles None Dropdown links*/

@@ -1,3 +1,4 @@
-.backgroundinfo {
-  background-color: var(--bg-color);
+.info {
+  padding: 1vh 0px 0px 0px;
+  min-height: 83vh;
 }

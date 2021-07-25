@@ -3,7 +3,7 @@ import "../css/info.css";
 
 export default function Info() {
   return (
-    <div className="backgroundinfo">
+    <div className="info">
       <Insight />
     </div>
   );
