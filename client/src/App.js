@@ -13,8 +13,8 @@ import Footer from "./components/Footer";
 import Navbot from "./components/Navbot";
 import Navtop from "./components/Navtop";
 import Header from "./components/Header";
-import Joinus from "./components/Signup";
 // Impoting Pages
+import Joinus from "./pages/Joinus";
 import Map from "./pages/Map";
 import Info from "./pages/Info";
 // Importing a CSS file
