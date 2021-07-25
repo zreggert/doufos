@@ -29,10 +29,10 @@ const resolvers = {
             const user = await User.findOne({ email });
 
             if (!user) {
-                throw new AuthenticationError('Incorrect password');
+                throw new AuthenticationError('User not found.');
             }
 
-            const passCorrect = await user.profile.isCorrectPassword(password);
+            const passCorrect = await user.checkPass(password);
 
             if (!passCorrect) {
                 throw new AuthenticationError('Password does not match.');
