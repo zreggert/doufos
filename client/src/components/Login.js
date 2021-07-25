@@ -37,8 +37,8 @@ const Login = () => {
         setFormState({
             email: '',
             password: ''
-        })
-    }
+        });
+    };
 
     return (
         <form onSubmit={handleSubmit}>
