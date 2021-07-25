@@ -1,9 +1,9 @@
-import Signup from "../components/Signup";
-import "../css/join-us.css";
+import Signup from "../components/Join-us";
+import "../css/modal.css";
 
 export default function Joinus() {
   return (
-    <div className="join-us">
+    <div className="modal-frame">
       <Signup />
     </div>
   );
