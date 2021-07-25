@@ -17,7 +17,7 @@ import Header from "./components/Header";
 import Info from "./pages/Info";
 import Map from "./pages/Map";
 import Joinus from "./pages/Joinus";
-import Joinus from "./pages/Signin";
+import Signin from "./pages/Signin";
 // Importing a CSS file
 import "./css/landing.css";
 import "./css/pages.css";

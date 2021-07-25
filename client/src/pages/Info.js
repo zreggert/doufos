@@ -1,9 +1,9 @@
 import Insight from "../components/Insight";
-import "../css/info.css";
+import "../css/modal.css";
 
 export default function Info() {
   return (
-    <div className="info">
+    <div className="modal-frame">
       <Insight />
     </div>
   );

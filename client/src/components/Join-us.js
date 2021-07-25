@@ -4,7 +4,7 @@ import { ADD_USER } from "../utils/mutations";
 import Auth from "../utils/auth";
 import { Link } from "react-router-dom";
 // Importing a CSS file
-import "../css/modal.css";
+import "../css/sign-up.css";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -46,7 +46,7 @@ const Signup = () => {
   };
 
   return (
-    <section className="modal-frame">
+    <section className="sign-up">
       <div className="exit">
         <Link className="exit-link" to="/">
           &#10006;
