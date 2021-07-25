@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 import { useMutation } from '@apollo/client';
-import { ADD_USER } from '../utils/mutations'
-
+import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
 
@@ -29,13 +28,6 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault(); 
-        // const data = {
-        //     first_name: this.firstName,
-        //     last_name: this.lastName,
-        //     email: this.email,
-        //     password: this.password,
-        //     password_confirm: this.confirmPassword
-        // };
 
         try {
             const { data } = await addUser({
@@ -43,14 +35,13 @@ const Signup = () => {
             });
             Auth.login(data.addUser.token);
         } catch (err) {
-            console.log(err)
+            console.log(err);
         }
     };
 
-    
     return (
         <form onSubmit={handleSubmit}>
-            <h3>Sign Up</h3>
+            <h3>Join US</h3>
 
             <div className="form-group">
                 <label>First Name</label>
@@ -87,7 +78,7 @@ const Signup = () => {
                 />
             </div>
 
-            <button className="btn btn-primary btn-block">Sign Up</button>
+            <button className="submit btn">Sign Up</button>
         </form>
     ); 
 };

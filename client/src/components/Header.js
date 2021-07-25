@@ -1,17 +1,20 @@
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 // Importing a CSS file
 import "../css/header.css";
-
 
 export default function Header() {
   return (
     <header className="user-section">
       <ul className="ul-user-section">
-        <li className="login">
-          <Link to={'/login'} >Sign In</Link>
+        <li>
+          <Link className="login" to="/signin">
+            Sign In
+          </Link>
         </li>
-        <li className="joins">
-          <Link to={'/signup'} >Join Us</Link>
+        <li>
+          <Link className="joins" to="/joinus">
+            Join Us
+          </Link>
         </li>
       </ul>
     </header>
