@@ -56,6 +56,9 @@ export default function App() {
           <div className="backimage background">
             <Header />
             <Navtop />
+            <Route exact path="/">
+              <div className="homepage"></div>
+            </Route>
             <Route exact path="/joinus">
               <Joinus />
             </Route>
@@ -68,9 +71,9 @@ export default function App() {
             <Route exact path="/map">
               <Map />
             </Route>
+            <Navbot />
+            <Footer />
           </div>
-          <Navbot />
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>

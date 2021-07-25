@@ -20,22 +20,25 @@ li {
   text-align: center;
   font-family: var(--primary-fonts);
   text-decoration: none;
-  font-size: 22px;
+  font-size: 17px;
 }
 
 .login {
   color: var(--Links);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .joins {
   color: #979461;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .logout {
   color: #979461;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .username {
@@ -50,11 +53,15 @@ li {
 /* Mobile devices (large Mobile phones, 600px to 767px) */
 @media only screen and (min-width: 600px) {
   li {
-    font-size: 25px;
+    font-size: 18px;
     letter-spacing: 0.1em;
   }
 
   .userIcon {
     display: block;
+  }
+  .user-section {
+    height: 4vh;
+    min-height: 30px;
   }
 }

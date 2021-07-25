@@ -32,3 +32,8 @@ a:hover {
   filter: alpha(opacity=80); /* IE8 and earlier */
   cursor: pointer;
 }
+
+.homepage {
+  width: 100vw;
+  height: 84vh;
+}
