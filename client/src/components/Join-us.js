@@ -115,7 +115,7 @@ const Signup = () => {
           />
         </div>
 
-        <button className="btn btn-primary btn-block">Join us</button>
+        <button className="btn btn-primary btn-block">Join Us</button>
       </form>
     </section>
   );
