@@ -14,9 +14,10 @@ import Navbot from "./components/Navbot";
 import Navtop from "./components/Navtop";
 import Header from "./components/Header";
 // Impoting Pages
-import Joinus from "./pages/Joinus";
-import Map from "./pages/Map";
 import Info from "./pages/Info";
+import Map from "./pages/Map";
+import Joinus from "./pages/Joinus";
+import Joinus from "./pages/Signin";
 // Importing a CSS file
 import "./css/landing.css";
 import "./css/pages.css";
@@ -63,7 +64,7 @@ export default function App() {
               <Joinus />
             </Route>
             <Route exact path="/signin">
-              <Map />
+              <Signin />
             </Route>
             <Route exact path="/info">
               <Info />
