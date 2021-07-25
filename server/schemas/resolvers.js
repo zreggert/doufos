@@ -32,6 +32,12 @@ const resolvers = {
                 throw new AuthenticationError('Incorrect password');
             }
 
+            const passCorrect = await user.profile.isCorrectPassword(password);
+
+            if (!passCorrect) {
+                throw new AuthenticationError('Password does not match.');
+            }
+
             const token = signToken(user);
             return { token, user}
         }
