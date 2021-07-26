@@ -11,6 +11,39 @@ import "../css/sign-up.css";
 
 export default function SigninC() {
 
+  const [formState, setFormState] = useState({
+    email: '',
+    password: ''
+  });
+  const [login] = useMutation(LOGIN_USER);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    setFormState({
+        ...formState,
+        [name]: value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+        const { data } = await login({
+            variables: { ...formState },
+        });
+        Auth.login(data.login.token);
+    } catch (err) {
+        console.log(err);
+    }
+
+    setFormState({
+        email: '',
+        password: ''
+    });
+};
+
   
   return (
     <section className="sign-up">
@@ -19,20 +52,28 @@ export default function SigninC() {
           &#10006;
         </Link>
       </div>
-      <form onSubmit="#">
+      <form onSubmit={handleSubmit}>
         <h3>Sign.In</h3>
 
         <div className="form-group">
           <label>Email</label>
-          <input type="email" className="form-control" placeholder="Email" />
+          <input 
+            name="email" 
+            type="email" className="form-control" 
+            placeholder="Email"
+            value={formState.email}
+            onChange={handleChange} />
         </div>
 
         <div className="form-group">
           <label>Password</label>
           <input
+            email="email"
             type="password"
             className="form-control"
             placeholder="Password"
+            value={formState.password}
+            onChange={handleChange}
           />
         </div>
 

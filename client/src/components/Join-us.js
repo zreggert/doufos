@@ -46,17 +46,18 @@ const Signup = () => {
           &#10006;
         </Link>
       </div>
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <h3>Sign.Up</h3>
 
         <div className="form-group">
           <label>First Name</label>
           <input
+            name="firstName"
             type="text"
             className="form-control"
             placeholder="First Name"
-            value={this.formState.firstName}
-            onChange={this.handleChange}
+            value={formState.firstName}
+            onChange={handleChange}
             // {e => this.firstName = e.target.value}
           />
         </div>
@@ -64,11 +65,12 @@ const Signup = () => {
         <div className="form-group">
           <label>Last Name</label>
           <input
+            name="lastName"
             type="text"
             className="form-control"
             placeholder="Last Name"
-            value={this.formState.lastName}
-            onChange={this.handleChange}
+            value={formState.lastName}
+            onChange={handleChange}
             // {e => this.lastName = e.target.value}
           />
         </div>
@@ -76,11 +78,12 @@ const Signup = () => {
         <div className="form-group">
           <label>Email</label>
           <input
+            name="email"
             type="email"
             className="form-control"
             placeholder="Email"
-            value={this.formState.email}
-            onChange={this.handleChange}
+            value={formState.email}
+            onChange={handleChange}
             // {e => this.email = e.target.value}
           />
         </div>
@@ -88,11 +91,12 @@ const Signup = () => {
         <div className="form-group">
           <label>Password</label>
           <input
+            name="password"
             type="password"
             className="form-control"
             placeholder="Password"
-            value={this.formState.password}
-            onChange={this.handleChange}
+            value={formState.password}
+            onChange={handleChange}
             // {e => this.password = e.target.value}
           />
         </div>
@@ -100,11 +104,12 @@ const Signup = () => {
         <div className="form-group">
           <label>Confirm Password</label>
           <input
+            name="confirmPassword"
             type="password"
             className="form-control"
             placeholder="Confirm Password"
-            value={this.formState.confirmPassword}
-            onChange={this.handleChange}
+            value={formState.confirmPassword}
+            onChange={handleChange}
             // {e => this.confirmPassword = e.target.value}
           />
         </div>
