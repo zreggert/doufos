@@ -74,7 +74,7 @@ export default function App() {
               <Info />
             </Route>
             <Route exact path="/map">
-              <MapPage />
+              <Map />
             </Route>
             <Navbot />
             <Footer />
