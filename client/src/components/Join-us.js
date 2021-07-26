@@ -8,13 +8,14 @@ import "../css/sign-up.css";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    first_name: "",
-    last_name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
+    confirmPassword: ""
   });
 
-  const [addUser] = useMutation(ADD_USER);
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,13 +28,6 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const data = {
-    //     first_name: this.firstName,
-    //     last_name: this.lastName,
-    //     email: this.email,
-    //     password: this.password,
-    //     password_confirm: this.confirmPassword
-    // };
 
     try {
       const { data } = await addUser({
@@ -61,7 +55,7 @@ const Signup = () => {
             type="text"
             className="form-control"
             placeholder="First Name"
-            value={formState.fistName}
+            value={formState.firstName}
             onChange={handleChange}
             // {e => this.firstName = e.target.value}
           />
