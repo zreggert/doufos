@@ -68,7 +68,7 @@ export default function SigninC() {
         <div className="form-group">
           <label>Password</label>
           <input
-            email="email"
+            name="password"
             type="password"
             className="form-control"
             placeholder="Password"
