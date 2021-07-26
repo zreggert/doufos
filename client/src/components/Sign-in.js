@@ -10,6 +10,8 @@ import Auth from '../utils/auth';
 import "../css/sign-up.css";
 
 export default function SigninC() {
+
+  
   return (
     <section className="sign-up">
       <div className="exit">

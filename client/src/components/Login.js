@@ -41,22 +41,22 @@ const Login = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={this.handleSubmit}>
             <h3>Sign In</h3>
 
             <div className="form-group">
                 <label>Email</label>
                 <input type="email" className="form-control"
-                placeholder="Email" value={formState.email}
-                onChange={handleChange}
+                placeholder="Email" value={this.formState.email}
+                onChange={this.handleChange}
                 />
             </div>
 
             <div className="form-group">
                 <label>Password</label>
                 <input type="password" className="form-control"
-                placeholder="Password" value={formState.password}
-                onChange={handleChange}
+                placeholder="Password" value={this.formState.password}
+                onChange={this.handleChange}
                 />
             </div>
 
