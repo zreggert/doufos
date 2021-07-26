@@ -15,7 +15,7 @@ const Signup = () => {
     confirmPassword: ""
   });
 
-  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [addUser] = useMutation(ADD_USER);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
