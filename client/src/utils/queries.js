@@ -16,3 +16,16 @@ export const QUERY_SINGLE_USER = gql`
     }
   }
 `;
+
+export const QUERY_SIGHTINGS = gql`
+  query allSightings{
+    sightings {
+      _id
+      latitude
+      longitude
+      city
+      state
+      date_time
+      text
+    }
+  }`;

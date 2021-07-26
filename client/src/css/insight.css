@@ -1,11 +1,21 @@
+.exit {
+  text-align: right;
+}
+
+.exit-link {
+  text-decoration: none;
+  padding: 0px 20px;
+  font-size: 50px;
+  color: var(--green-color);
+}
+
 .insight-section {
   display: block;
   height: auto;
-  width: 100%;
-  min-height: 950px;
+  width: 96vw;
   padding: 0px 0px 0px 0px;
-  margin: 0px 0px;
-  background-color: #161a1a;
+  margin: 0px auto;
+  background-color: #181818;
 }
 
 .insight-text {
@@ -15,7 +25,7 @@
 }
 
 .insight-text h3 {
-  color: var(--mid-gray-color);
+  color: var(--Links);
   padding: 30px 90px 30px 90px;
   text-align: center;
   font-size: 55px;
@@ -78,7 +88,6 @@
   .insight-section {
     display: block;
     height: auto;
-    min-height: 1160px;
   }
 
   .insight-text {
@@ -129,12 +138,12 @@
 
 @media only screen and (min-width: 1024px) {
   .insight-text {
-    height: 610px;
+    height: auto;
   }
 
   .insight-image {
     width: 800px;
-    height: 550px;
+    height: auto;
     padding: 30px 0px 30px 0px;
   }
 
@@ -147,7 +156,6 @@
   .insight-section {
     height: 70%;
     min-height: 80vh;
-    max-height: 900px;
   }
 
   .insight-text {
@@ -157,7 +165,7 @@
   }
 
   .insight-text h3 {
-    padding: 50px 0px 30px 100px;
+    padding: 30px 0px 30px 100px;
     font-size: 70px;
   }
 
@@ -169,6 +177,6 @@
   .insight-image {
     display: inline-block;
     width: 49%;
-    padding: 40px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
   }
 }

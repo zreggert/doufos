@@ -1,18 +1,10 @@
-import Footer from "../components/Footer";
-import Navbot from "../components/Navbot";
 import Insight from "../components/Insight";
-import Header from "../components/Header";
-import Navtop from "../components/Navtop";
-import "../css/info.css";
+import "../css/modal.css";
 
 export default function Info() {
   return (
-    <div className="backgroundinfo">
-      <Header />
-      <Navtop />
+    <div className="modal-frame">
       <Insight />
-      <Navbot />
-      <Footer />
     </div>
   );
 }

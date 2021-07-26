@@ -1,30 +1,31 @@
 import GoogleMapReact from "google-map-react";
-import React, { Component } from "react";
+import React from "react";
 import LocationMarker from "./LocationMarker";
-import sightData from "./sightingData.json";
 
-class Map extends Component {
-  render() {
+
+export default function Map({sightings}) {
+
     return (
       <div
-        style={{ height: "80vh", width: "90vw", margin: "20px auto 20px auto" }}
+        style={{ height: "80vh", width: "90vw", margin: "0px auto 0px auto" }}
       >
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo" }}
           defaultCenter={{ lat: 39.8283, lng: -98.5795 }}
           defaultZoom={3}
         >
-          {sightData.map((location) => (
+          {sightings.map((sighting) => (
             <LocationMarker
-              key={location.id}
-              lat={location.latitude}
-              lng={location.longitude}
+              key={sighting._id}
+              lat={sighting.latitude}
+              lng={sighting.longitude}
             />
           ))}
+          
         </GoogleMapReact>
+        
       </div>
     );
-  }
-}
+  };
 
-export default Map;
+

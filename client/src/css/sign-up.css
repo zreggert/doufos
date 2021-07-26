@@ -1,0 +1,97 @@
+.sign-up {
+  width: 96vw;
+  padding: 0px 0px 0px 0px;
+  margin: 0px auto;
+  background-color: var(--mid-gray-color);
+  font-family: var(--primary-fonts);
+}
+
+form h3 {
+  color: var(--yellow-color);
+  letter-spacing: 0.06em;
+  padding: 0px 0px 0px 0px;
+  margin: 20px 0px;
+  font-size: 50px;
+  text-transform: uppercase;
+}
+
+.form-group {
+  text-align: left;
+  padding: 5px 30px 5px 30px;
+}
+
+.form-group label {
+  font-family: var(--primary-fonts);
+  font-size: 18px;
+  padding: 0px 10px 0px 0px;
+}
+
+.form-group input {
+  font-family: var(--primary-fonts);
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.btn {
+  font-family: var(--primary-fonts);
+  background-color: var(--green-color);
+  width: 100%;
+  margin: 20px 0px 0px 0px;
+  border: none;
+  color: var(--footer-background);
+  padding: 30px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 650px) {
+  .sign-up {
+    width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sign-up {
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sign-up {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .sign-up {
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .sign-up {
+    width: 32vw;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  .sign-up {
+    width: 28vw;
+    padding: 0px 0px 0px 0px;
+  }
+
+  form h3 {
+    font-size: 60px;
+    margin: 0px 0px;
+  }
+  .btn {
+    margin: 20px 0px 0px 0px;
+    padding: 20px 32px;
+    font-size: 30px;
+  }
+}
