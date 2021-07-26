@@ -7,7 +7,7 @@ class Map extends Component {
   render() {
     return (
       <div
-        style={{ height: "80vh", width: "90vw", margin: "20px auto 20px auto" }}
+        style={{ height: "80vh", width: "90vw", margin: "0px auto 0px auto" }}
       >
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo" }}

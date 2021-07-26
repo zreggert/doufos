@@ -18,7 +18,7 @@ export default function Navtop() {
 
   return (
     <nav className={desktopNav} id="myTopnav">
-      <Link className="linkstyles" to="/">
+      <Link className="linkstyles active" to="/">
         <img
           src="images/nav/top/nav-logo.png"
           alt="Database Of Unidentified Flying Object Sightings"

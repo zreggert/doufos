@@ -1,5 +1,5 @@
 .botNav {
-  background-color: var(--mid-gray-color);
+  background-color: var(--bg-color);
 }
 
 .bottomNav {
@@ -50,8 +50,17 @@
   padding: 0px 0px 20px 0px;
 }
 
+.titles {
+  color: var(--text-color);
+}
+
 .following {
   color: var(--yellow-color);
+  text-align: left;
+}
+
+.botNavTitle {
+  text-align: left;
 }
 
 /* Mobile devices (large Mobile phones, 600px to 767px) */
