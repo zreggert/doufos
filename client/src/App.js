@@ -15,6 +15,7 @@ import Navtop from "./components/Navtop";
 import Header from "./components/Header";
 import Insight from "./components/Insight";
 import Joinus from "./components/Signup";
+import MapPage from "./pages/MapPage";
 import { headerbackground } from "./components/Objects";
 // Importing a CSS file
 import "./css/landing.css";
@@ -57,13 +58,13 @@ export default function App() {
               <Joinus />
             </Route>
             <Route exact path="/signin">
-              <Map />
+              <MapPage />
             </Route>
             <Route exact path="/info">
               <Insight />
             </Route>
             <Route exact path="/map">
-              <Map />
+              <MapPage />
             </Route>
           </div>
           <Navbot />
