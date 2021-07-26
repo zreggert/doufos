@@ -1,0 +1,80 @@
+.map-section {
+  height: auto;
+  width: 96vw;
+  padding: 0px 0px 0px 0px;
+  margin: 0px auto;
+  background-color: #181818;
+  text-align: right;
+}
+
+.map-title {
+  width: 70%;
+  display: inline-block;
+  font-family: var(--primary-fonts);
+  color: var(--yellow-color);
+  font-size: 50px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.exit-map {
+  width: 30%;
+  display: inline-block;
+}
+
+.exit-link-map {
+  text-decoration: none;
+  padding: 0px 20px;
+  font-size: 50px;
+  color: var(--green-color);
+}
+
+@media only screen and (min-width: 400px) {
+  .map-title {
+    width: 66%;
+  }
+
+  .exit-map {
+    width: 34%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .map-title {
+    width: 63%;
+  }
+
+  .exit-map {
+    width: 37%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .map-title {
+    width: 60%;
+  }
+
+  .exit-map {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .map-title {
+    width: 57%;
+  }
+
+  .exit-map {
+    width: 43%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .map-title {
+    width: 54%;
+  }
+
+  .exit-map {
+    width: 46%;
+  }
+}
