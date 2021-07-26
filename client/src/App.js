@@ -8,18 +8,29 @@ import {
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Map from "./components/Map";
+// Importing components
 import Footer from "./components/Footer";
 import Navbot from "./components/Navbot";
 import Navtop from "./components/Navtop";
 import Header from "./components/Header";
+<<<<<<< HEAD
 import Insight from "./components/Insight";
 import Joinus from "./components/Signup";
 import MapPage from "./pages/MapPage";
 import { headerbackground } from "./components/Objects";
+=======
+// Impoting Pages
+import Info from "./pages/Info";
+import Map from "./pages/Map";
+import Joinus from "./pages/Joinus";
+import Signin from "./pages/Signin";
+import Form from "./pages/Form";
+>>>>>>> 6557355bd8d8b215a65b83564a10eccb124b50d8
 // Importing a CSS file
 import "./css/landing.css";
 import "./css/pages.css";
+// Importing Objects
+import { headerbackground } from "./components/Objects";
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -54,21 +65,31 @@ export default function App() {
           <div className="backimage background">
             <Header />
             <Navtop />
+            <Route exact path="/">
+              <div className="homepage"></div>
+            </Route>
             <Route exact path="/joinus">
               <Joinus />
             </Route>
             <Route exact path="/signin">
+<<<<<<< HEAD
               <MapPage />
+=======
+              <Signin />
+            </Route>
+            <Route exact path="/form">
+              <Form />
+>>>>>>> 6557355bd8d8b215a65b83564a10eccb124b50d8
             </Route>
             <Route exact path="/info">
-              <Insight />
+              <Info />
             </Route>
             <Route exact path="/map">
               <MapPage />
             </Route>
+            <Navbot />
+            <Footer />
           </div>
-          <Navbot />
-          <Footer />
         </div>
       </Router>
     </ApolloProvider>

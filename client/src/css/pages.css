@@ -5,7 +5,9 @@
   --green-color: #86cf8b;
   --Links: #979461;
   --bg-color: #2c2c2c;
+  --footer-background: #202020;
   --text-color: #b9b9b9;
+  --info-bg: #202020;
 }
 
 * {
@@ -21,6 +23,7 @@ body {
   height: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #000000;
 }
 
 ::-webkit-scrollbar {
@@ -31,4 +34,9 @@ a:hover {
   opacity: 0.8;
   filter: alpha(opacity=80); /* IE8 and earlier */
   cursor: pointer;
+}
+
+.homepage {
+  width: 100vw;
+  height: 84vh;
 }

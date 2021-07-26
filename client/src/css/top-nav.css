@@ -22,7 +22,7 @@
 }
 
 .navBar {
-  padding: 20px 20px 0px 20px;
+  padding: 10px 20px 10px 20px;
 }
 
 /* active class to highlight the current page */
@@ -218,12 +218,8 @@
   }
 
   /* Nav */
-  .active {
-    padding: 37px 0px 37px 0px;
-  }
-
   .active img {
-    display: none;
+    width: 256px;
   }
 
   /* Add a dark background on topnav links and the dropdown button on hover */
@@ -237,6 +233,8 @@
     width: 100%;
     margin: 0 auto 0px auto;
     padding: 0px 0px 0px 100px;
+    height: 12vh;
+    min-height: 115px;
   }
 
   /* Styles None Dropdown links*/
