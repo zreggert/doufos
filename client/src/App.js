@@ -18,6 +18,7 @@ import Info from "./pages/Info";
 import Map from "./pages/Map";
 import Joinus from "./pages/Joinus";
 import Signin from "./pages/Signin";
+import Form from "./pages/Form";
 // Importing a CSS file
 import "./css/landing.css";
 import "./css/pages.css";
@@ -65,6 +66,9 @@ export default function App() {
             </Route>
             <Route exact path="/signin">
               <Signin />
+            </Route>
+            <Route exact path="/form">
+              <Form />
             </Route>
             <Route exact path="/info">
               <Info />

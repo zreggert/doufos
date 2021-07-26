@@ -1,0 +1,54 @@
+.sightings-form {
+  width: 96vw;
+  padding: 0px 0px 0px 0px;
+  margin: 0px auto;
+  background-color: var(--info-bg);
+  font-family: var(--primary-fonts);
+}
+
+.form-group textarea {
+  width: 95.5%;
+  margin: 10px 0px 0px 0px;
+  height: 250px;
+  padding: 12px 0px 0px 20px;
+}
+
+.form-label {
+  color: var(--text-color);
+}
+
+@media only screen and (min-width: 650px) {
+  .sightings-form {
+    width: 70vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sightings-form {
+    width: 60vw;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .sightings-form {
+    width: 50vw;
+  }
+}
+
+@media only screen and (min-width: 1300px) {
+  .sightings-form {
+    width: 40vw;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .sightings-form {
+    width: 32vw;
+  }
+}
+
+@media only screen and (min-width: 1824px) {
+  .sightings-form {
+    width: 32vw;
+  }
+}
