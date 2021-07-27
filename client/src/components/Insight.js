@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom";
+import React, { useState } from "react";
 // Importing a CSS file
 import "../css/insight.css";
 
 export default function Navbot() {
+  const insightImagesobj = {
+    alien1: "images/insight/alien1.png",
+    alien2: "images/insight/alien2.png",
+  };
+  
+  const [insightImages, setinsightImages] = useState(insightImagesobj.alien1);
+
+  const handleMouseOverAliens = () => {
+    setinsightImages(insightImagesobj.alien2);
+  };
+
+  const handleMouseOutAliens = () => {
+    setinsightImages(insightImagesobj.alien1);
+  };
+
   return (
     <section className="insight-section" id="insight">
       <div className="exit">
@@ -25,7 +41,12 @@ export default function Navbot() {
         </p>
       </div>
       <div className="insight-image">
-        <img src="images/insight/insight-image.jpg" alt="aliens" />
+        <img
+          onMouseOver={handleMouseOverAliens}
+          onMouseOut={handleMouseOutAliens}
+          src={insightImages}
+          alt="aliens"
+        />
       </div>
     </section>
   );

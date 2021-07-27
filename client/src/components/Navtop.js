@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Auth from "../utils/auth";
 // Import CSS File Dependency
 import "../css/top-nav.css";
 // Import Objects
@@ -30,6 +31,13 @@ export default function Navtop() {
       <Link className="navBar linkstyles" to="/map">
         Sightings
       </Link>
+      {Auth.loggedIn() ? (
+        <Link className="navBar linkstyles" to="/form">
+          report
+        </Link>
+      ) : (
+        <span></span>
+      )}
       <Link
         to={navOptions.none}
         className="icon linkstyles"
