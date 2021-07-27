@@ -23,3 +23,18 @@ export const LOGIN_USER = gql`
         }
     }
 `;
+
+export const ADD_SIGHTING = gql`
+    mutation addSighting($latitude: Float!, $longitude: Float!, $city: String!, $state: String!, $date_time: String!, $text: String!  ){
+        addSighting(latitude: $latitude, longitude: $longitude, city: $city, state: $state, date_time: $date_time, text:$text){
+                    latitude, 
+                    longitude, 
+                    city, 
+                    state, 
+                    date_time, 
+                    text
+
+        }
+    }
+
+`

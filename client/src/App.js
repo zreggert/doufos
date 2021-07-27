@@ -5,6 +5,10 @@ import {
   ApolloProvider,
   createHttpLink,
 } from "@apollo/client";
+
+
+
+
 import { setContext } from "@apollo/client/link/context";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 //import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -13,7 +17,7 @@ import Footer from "./components/Footer";
 import Navbot from "./components/Navbot";
 import Navtop from "./components/Navtop";
 import Header from "./components/Header";
-// Impoting Pages
+// Importing Pages
 import Info from "./pages/Info";
 import Map from "./pages/Map";
 import Joinus from "./pages/Joinus";
@@ -25,9 +29,11 @@ import "./css/pages.css";
 // Importing Objects
 import { headerbackground } from "./components/Objects";
 
+
+
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
-  uri: "/graphql",
+  uri: "http://localhost:3001/graphql",
 });
 
 // Construct request middleware that will attach the JWT token to every request as an `authorization` header
@@ -76,6 +82,10 @@ export default function App() {
             <Route exact path="/map">
               <Map />
             </Route>
+            <Route exact path="/add-sighting">
+              <Form />
+            </Route>
+            
             <Navbot />
             <Footer />
           </div>

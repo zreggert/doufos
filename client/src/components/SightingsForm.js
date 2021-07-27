@@ -1,12 +1,15 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client"
+import { ADD_SIGHTING } from "../utils/mutations"
 import "../css/sightings-form.css";
 
 function SightingsForm() {
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
-  const [description, setDescription] = useState("");
+  const [text, setText] = useState("");
+  const [addSighting] = useMutation(ADD_SIGHTING)
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -24,9 +27,18 @@ function SightingsForm() {
       latitude,
       longitude,
       date,
-      description,
+      text,
     };
     console.log(info);
+
+    try {
+    const {data} = await addSighting({
+      variables: {...info}
+    });
+    console.log(data)
+    } catch(e){
+      console.log(e)
+    }
   }
 
   return (
@@ -60,12 +72,12 @@ function SightingsForm() {
         </div>
 
         <div className="form-group">
-          <label className="form-label">Encounter Description</label>
+          <label className="form-label">Encounter text</label>
           <textarea
             type="text"
             className="form-control"
-            placeholder="Encounter Description"
-            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Encounter text"
+            onChange={(e) => setText(e.target.value)}
           />
         </div>
         <button className="btn" type="submit">
