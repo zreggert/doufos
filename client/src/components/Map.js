@@ -1,7 +1,7 @@
 import GoogleMapReact from "google-map-react";
 import React, { useRef, useState } from "react";
 import useSupercluster from "use-supercluster";
-import alienImage from "./alien_16px.png"
+import alienImage from "../images/alien_16px.png"
 import "../css/markers.css"
 
 
@@ -41,23 +41,8 @@ export default function Map({sightings}) {
         defaultZoom={4}
         options={{styles: [
           {
-              "stylers": [
-                  {
-                      "saturation": -100
-                  }
-              ]
-          },
-          {
-              "featureType": "water",
-              "elementType": "geometry.fill",
-              "stylers": [
-                  {
-                      "color": "#0099dd"
-                  }
-              ]
-          },
-          {
-              "elementType": "labels",
+              "featureType": "administrative.locality",
+              "elementType": "all",
               "stylers": [
                   {
                       "visibility": "off"
@@ -65,42 +50,74 @@ export default function Map({sightings}) {
               ]
           },
           {
-              "featureType": "poi.park",
-              "elementType": "geometry.fill",
+              "featureType": "landscape",
+              "elementType": "all",
               "stylers": [
                   {
-                      "color": "#aadd55"
+                      "color": "#AFFFA0"
                   }
               ]
           },
           {
-              "featureType": "road.highway",
-              "elementType": "labels",
+              "featureType": "poi",
+              "elementType": "all",
               "stylers": [
                   {
-                      "visibility": "on"
+                      "color": "#EAFFE5"
                   }
               ]
           },
           {
-              "featureType": "road.arterial",
-              "elementType": "labels.text",
+              "featureType": "poi.business",
+              "elementType": "all",
               "stylers": [
                   {
-                      "visibility": "on"
+                      "visibility": "off"
                   }
               ]
           },
           {
-              "featureType": "road.local",
-              "elementType": "labels.text",
+              "featureType": "poi.government",
+              "elementType": "all",
               "stylers": [
                   {
-                      "visibility": "on"
+                      "visibility": "off"
                   }
               ]
           },
-          {}
+          {
+              "featureType": "road",
+              "elementType": "geometry",
+              "stylers": [
+                  {
+                      "color": "#59A499"
+                  }
+              ]
+          },
+          {
+              "featureType": "road",
+              "elementType": "geometry.stroke",
+              "stylers": [
+                  {
+                      "color": "#F0FF8D"
+                  },
+                  {
+                      "weight": 2.2
+                  }
+              ]
+          },
+          {
+              "featureType": "water",
+              "elementType": "all",
+              "stylers": [
+                  {
+                      "visibility": "on"
+                  },
+                  {
+                      "color": "#1A87D6"
+                  }
+              ]
+          },
       ]}}
         yesIWantToUseGoogleMapApiInternals
         onGoogleApiLoaded={({ map }) => {
