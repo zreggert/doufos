@@ -29,14 +29,18 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const { data } = await addUser({
-        variables: { ...formState },
-      });
-      console.log(data)
-      Auth.login(data.addUser.token);
-    } catch (err) {
-      console.log(err);
+    if (formState.password !== formState.confirmPassword){
+      alert('Please reconfirm your password is correct.')
+    } else {
+      try {
+        const { data } = await addUser({
+          variables: { ...formState },
+        });
+        console.log(data)
+        Auth.login(data.addUser.token);
+      } catch (err) {
+        console.log(err);
+      }
     }
   };
 
