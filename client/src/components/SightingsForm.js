@@ -1,12 +1,28 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useMutation } from "@apollo/client"
+import { ADD_SIGHTING } from "../utils/mutations"
 import "../css/sightings-form.css";
 
 function SightingsForm() {
   const [location, setLocation] = useState("");
-  const [date, setDate] = useState("");
-  const [description, setDescription] = useState("");
+  const [date_time, setDate] = useState("");
+  const [text, setText] = useState("");
+  const [addSighting] = useMutation(ADD_SIGHTING)
+  // const [formState, setFormState] = useState({
+  //   location: "",
+  //   latitude: "",
+  //   longitude: "",
+  //   date_time: "",
+  //   text: ""
+  // });
+
+  // const [addSighting] = useMutation(ADD_SIGHTING)
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  // };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -19,14 +35,29 @@ function SightingsForm() {
         latitude = data.features[0].center[1];
         longitude = data.features[0].center[0];
       });
+      
 
     const info = {
-      latitude,
-      longitude,
-      date,
-      description,
+      location: location,
+      latitude: latitude,
+      longitude: longitude,
+      date_time: date_time,
+      text: text,
     };
     console.log(info);
+
+    try {
+    const {data} = await addSighting({
+      location: info.location,
+      latitude: info.latitude,
+      longitude: info.longitude,
+      date_time: info.date_time,
+      text: info.text,
+    });
+    console.log(data)
+    } catch(e){
+      console.log(e)
+    }
   }
 
   return (
@@ -60,12 +91,12 @@ function SightingsForm() {
         </div>
 
         <div className="form-group">
-          <label className="form-label">Encounter Description</label>
+          <label className="form-label">Encounter text</label>
           <textarea
             type="text"
             className="form-control"
-            placeholder="Encounter Description"
-            onChange={(e) => setDescription(e.target.value)}
+            placeholder="Encounter text"
+            onChange={(e) => setText(e.target.value)}
           />
         </div>
         <button className="btn" type="submit">

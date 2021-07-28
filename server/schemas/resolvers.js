@@ -40,6 +40,12 @@ const resolvers = {
 
             const token = signToken(user);
             return { token, user}
+        },
+
+        addSighting: async (parent, args) => {
+            console.log(args)
+            const sighting = await Sighting.create(args); 
+            return sighting;
         }
 
     }
