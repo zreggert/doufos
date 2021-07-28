@@ -1,9 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { useMutation, useQuery } from "@apollo/client"
-import { ADD_SIGHTING } from "../utils/mutations"
-import { QUERY_USERS } from "../utils/queries";
+import { useMutation } from "@apollo/client";
+import { ADD_SIGHTING } from "../utils/mutations";
+import Auth from "../utils/auth";
 import "../css/sightings-form.css";
 
 function SightingsForm() {
@@ -30,6 +30,7 @@ function SightingsForm() {
           date_time,
           text
         }})
+        Auth.reportSubmitted();
       })
       .catch((err) => {
         console.log(err);

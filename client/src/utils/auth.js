@@ -23,6 +23,10 @@ class AuthService {
     localStorage.removeItem("id_token");
     window.location.reload();
   }
+
+  reportSubmitted() {
+    window.location.assign("/map")
+  }
 }
 
 export default new AuthService();
