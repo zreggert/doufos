@@ -8,10 +8,11 @@ import "../css/sign-up.css";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    first_name: "",
-    last_name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     password: "",
+    confirmPassword: ""
   });
 
   const [addUser] = useMutation(ADD_USER);
@@ -27,18 +28,12 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // const data = {
-    //     first_name: this.firstName,
-    //     last_name: this.lastName,
-    //     email: this.email,
-    //     password: this.password,
-    //     password_confirm: this.confirmPassword
-    // };
 
     try {
       const { data } = await addUser({
         variables: { ...formState },
       });
+      console.log(data)
       Auth.login(data.addUser.token);
     } catch (err) {
       console.log(err);
@@ -58,10 +53,11 @@ const Signup = () => {
         <div className="form-group">
           <label>First Name</label>
           <input
+            name="firstName"
             type="text"
             className="form-control"
             placeholder="First Name"
-            value={formState.fistName}
+            value={formState.firstName}
             onChange={handleChange}
             // {e => this.firstName = e.target.value}
           />
@@ -70,6 +66,7 @@ const Signup = () => {
         <div className="form-group">
           <label>Last Name</label>
           <input
+            name="lastName"
             type="text"
             className="form-control"
             placeholder="Last Name"
@@ -82,6 +79,7 @@ const Signup = () => {
         <div className="form-group">
           <label>Email</label>
           <input
+            name="email"
             type="email"
             className="form-control"
             placeholder="Email"
@@ -94,6 +92,7 @@ const Signup = () => {
         <div className="form-group">
           <label>Password</label>
           <input
+            name="password"
             type="password"
             className="form-control"
             placeholder="Password"
@@ -106,6 +105,7 @@ const Signup = () => {
         <div className="form-group">
           <label>Confirm Password</label>
           <input
+            name="confirmPassword"
             type="password"
             className="form-control"
             placeholder="Confirm Password"

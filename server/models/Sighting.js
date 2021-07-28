@@ -1,5 +1,4 @@
 const { Schema, model } = require("mongoose");
-const bcrypt = require("bcrypt");
 
 const sightingSchema = new Schema({
     latitude: {
@@ -10,16 +9,12 @@ const sightingSchema = new Schema({
         type: Number,
         trim: true,
     },
-    city: {
-        type: String,
-        trim: true,
-    },
-    state: {
+    location: {
         type: String,
         trim: true,
     },
     date_time: {
-        type: Date,
+        type: String,
         trim: true,
     },
     text: {

@@ -190,5 +190,3 @@ export default function Map({sightings}) {
     </div>
   );
 };
- 
-

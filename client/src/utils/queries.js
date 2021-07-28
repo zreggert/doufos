@@ -23,8 +23,7 @@ export const QUERY_SIGHTINGS = gql`
       _id
       latitude
       longitude
-      city
-      state
+      location
       date_time
       text
     }

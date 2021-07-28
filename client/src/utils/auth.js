@@ -1,29 +1,32 @@
 import decode from "jwt-decode";
 
 class AuthService {
+  getUser() {
+    return decode(this.getToken());
+  }
 
-    getUser() {
-        return decode (this.getToken());
-    }
+  loggedIn() {
+    const token = this.getToken();
+    return token ? true : false;
+  }
 
-    loggedIn() {
-        const token = this.getToken();
-        return token ? true : false;
-    }
+  getToken() {
+    return localStorage.getItem("id_token");
+  }
 
-    getToken() {
-        return localStorage.getItem('id_token');
-    }
+  login(idToken) {
+    localStorage.setItem("id_token", idToken);
+    window.location.assign("/");
+  }
 
-    login(idToken) {
-        localStorage.setItem('id_token', idToken);
-        window.location.assign('/');
-    }
+  logout() {
+    localStorage.removeItem("id_token");
+    window.location.reload();
+  }
 
-    logout() {
-        localStorage.removeItem('id__token');
-        window.location.reload();
-    }
+  reportSubmitted() {
+    window.location.assign("/map")
+  }
 }
 
 export default new AuthService();
