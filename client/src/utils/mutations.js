@@ -25,12 +25,11 @@ export const LOGIN_USER = gql`
 `;
 
 export const ADD_SIGHTING = gql`
-    mutation addSighting($latitude: Float!, $longitude: Float!, $city: String!, $state: String!, $date_time: String!, $text: String!  ){
-        addSighting(latitude: $latitude, longitude: $longitude, city: $city, state: $state, date_time: $date_time, text:$text){
+    mutation addSighting($latitude: Float!, $longitude: Float!, $location: String!, $date_time: String!, $text: String!) {
+        addSighting(latitude: $latitude, longitude: $longitude, location: $location, date_time: $date_time, text:$text) {
                     latitude, 
                     longitude, 
-                    city, 
-                    state, 
+                    location, 
                     date_time, 
                     text
 

@@ -7,9 +7,22 @@ import "../css/sightings-form.css";
 
 function SightingsForm() {
   const [location, setLocation] = useState("");
-  const [date, setDate] = useState("");
+  const [date_time, setDate] = useState("");
   const [text, setText] = useState("");
   const [addSighting] = useMutation(ADD_SIGHTING)
+  // const [formState, setFormState] = useState({
+  //   location: "",
+  //   latitude: "",
+  //   longitude: "",
+  //   date_time: "",
+  //   text: ""
+  // });
+
+  // const [addSighting] = useMutation(ADD_SIGHTING)
+
+  // const handleChange = (e) => {
+  //   const { name, value } = e.target;
+  // };
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -22,18 +35,24 @@ function SightingsForm() {
         latitude = data.features[0].center[1];
         longitude = data.features[0].center[0];
       });
+      
 
     const info = {
-      latitude,
-      longitude,
-      date,
-      text,
+      location: location,
+      latitude: latitude,
+      longitude: longitude,
+      date_time: date_time,
+      text: text,
     };
     console.log(info);
 
     try {
     const {data} = await addSighting({
-      variables: {...info}
+      location: info.location,
+      latitude: info.latitude,
+      longitude: info.longitude,
+      date_time: info.date_time,
+      text: info.text,
     });
     console.log(data)
     } catch(e){

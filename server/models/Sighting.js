@@ -9,16 +9,12 @@ const sightingSchema = new Schema({
         type: Number,
         trim: true,
     },
-    city: {
-        type: String,
-        trim: true,
-    },
-    state: {
+    location: {
         type: String,
         trim: true,
     },
     date_time: {
-        type: Date,
+        type: String,
         trim: true,
     },
     text: {
