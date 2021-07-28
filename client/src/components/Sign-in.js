@@ -30,13 +30,15 @@ export default function SigninC() {
     e.preventDefault();
 
     try {
-        const { data } = await login({
-            variables: { ...formState },
-        });
-        Auth.login(data.login.token);
+      const { data } = await login({
+          variables: { ...formState },
+      });
+      Auth.login(data.login.token);
     } catch (err) {
-        console.log(err);
+      console.log(err);
+      alert('Password or email does not match.')
     }
+    
 
     setFormState({
         email: '',
