@@ -1,0 +1,12 @@
+.cluster-marker {
+    color: #64c37d;
+    background: black;
+    border-radius: 50%;
+    border-color:#858a87;
+    border-width: 1px;
+    border-style: solid;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
