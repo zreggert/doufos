@@ -1,5 +1,6 @@
 .cluster-marker {
     color: #64c37d;
+    font-size: 0.75rem;
     background: black;
     border-radius: 50%;
     border-color:#858a87;
@@ -10,3 +11,4 @@
     justify-content: center;
     align-items: center;
 }
+

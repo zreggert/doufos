@@ -1,0 +1,38 @@
+.sightingInfo {
+    font-size: 10px;
+    width: 20%;
+    height: auto; 
+    background: rgba(0, 0, 0, 0.6);
+    color: #64c37d;
+    border-style: solid;
+    border-radius: 1px;
+    border-color: black;
+    position:fixed;
+    min-width: 200px; 
+    height: auto; 
+    padding: 20px;
+ 
+}
+
+h2 {
+    text-align: center;
+}
+
+ul, li {
+    list-style: none;
+    text-align: left;
+    font-size: .75rem;
+}
+
+
+.exit-link-box {
+    text-decoration: none;
+    color: #67c37d
+}
+
+.exit-link {
+    width: 10%;
+    font-size: small;
+    height: 10%;
+    display: inline-block;
+  }
