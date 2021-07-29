@@ -9,12 +9,15 @@ import "../css/markers.css"
 const Marker = ({ children }) => children;
 
 export default function Map({sightings}) {
-
+//need reference to the map itself for later use
   const mapRef = useRef();
+//using state for zoom and bounds needed for the supercluster package
   const [bounds, setBounds] = useState(null);
   const [zoom, setZoom] = useState(10);
+//using state for location info box when icon is clicked
   const [locationInfo, setLocationInfo] = useState(null)
 
+//formatting sighting data for usage by supercluster package. Needs to read in a GeoJSON format with features with properties and geometry with lat/lng coordinates
   const points = sightings.map(sighting => ({
     type: "Feature",
     properties: { cluster: false, sightingId: sighting._id, text: sighting.text },
@@ -26,7 +29,7 @@ export default function Map({sightings}) {
       ]
     }
   }));
-
+//retrieving clusters with the useSupercluster hook. Destructured object providing array of clusters
   const { clusters, supercluster } = useSupercluster({
     points,
     bounds,
@@ -155,10 +158,11 @@ export default function Map({sightings}) {
                 <div
                   className="cluster-marker"
                   style={{
-                    width: `${10 + (pointCount / points.length) * 50}px`,
+                    width: `${10 + (pointCount / points.length) * 50}px`, //changing size of the cluster in px with a calc based on how many points in the cluster.
                     height: `${10 + (pointCount / points.length) * 50}px`
                   }}
                   onClick={() => {
+  //allows for animated zoom transition into a cluster
                     const expansionZoom = Math.min(
                       supercluster.getClusterExpansionZoom(cluster.id),
                       20
@@ -183,7 +187,7 @@ export default function Map({sightings}) {
               onClick= {console.log('click')}
               >
                 <div className='location-marker' id='location-marker' style={{backgroundColor: "#FF0000"}}>
-                  <img src={alienImage} alt='they are out there' onClick={() => setLocationInfo({ id: sightingId, text: text})}></img>
+                  <img src={alienImage} alt='they are out there' onMouseOver={() => setLocationInfo({ id: sightingId, text: text})} onMouseOut={()=> setLocationInfo(null)}></img>
                 </div>
                 
             </Marker>
