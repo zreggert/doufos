@@ -2,6 +2,7 @@ import GoogleMapReact from "google-map-react";
 import React, { useRef, useState } from "react";
 import useSupercluster from "use-supercluster";
 import alienImage from "../images/alien_16px.png"
+import LocationInfo from "./LocationInfo"
 import "../css/markers.css"
 
 
@@ -12,10 +13,11 @@ export default function Map({sightings}) {
   const mapRef = useRef();
   const [bounds, setBounds] = useState(null);
   const [zoom, setZoom] = useState(10);
+  const [locationInfo, setLocationInfo] = useState(null)
 
   const points = sightings.map(sighting => ({
     type: "Feature",
-    properties: { cluster: false, sightingId: sighting._id },
+    properties: { cluster: false, sightingId: sighting._id, text: sighting.text },
     geometry: {
       type: "Point",
       coordinates: [
@@ -34,7 +36,7 @@ export default function Map({sightings}) {
 
 // console.log(clusters)
   return (
-    <div style={{ height: "80vh", width: "80vw", margin: "0px auto 0px auto"}}>
+    <div style={{ height: "80vh", width: "90vw", margin: "20px auto 20px auto"}} id='googleMap'>
       <GoogleMapReact
         bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_KEY }}
         defaultCenter={{ lat: 39.8283, lng: -98.5795 }}
@@ -137,6 +139,8 @@ export default function Map({sightings}) {
           const [longitude, latitude] = cluster.geometry.coordinates;
           const {
             cluster: isCluster,
+            sightingId,
+            text,
             point_count: pointCount
           } = cluster.properties;
 
@@ -151,8 +155,8 @@ export default function Map({sightings}) {
                 <div
                   className="cluster-marker"
                   style={{
-                    width: `${10 + (pointCount / points.length) * 40}px`,
-                    height: `${10 + (pointCount / points.length) * 40}px`
+                    width: `${10 + (pointCount / points.length) * 50}px`,
+                    height: `${10 + (pointCount / points.length) * 50}px`
                   }}
                   onClick={() => {
                     const expansionZoom = Math.min(
@@ -176,16 +180,17 @@ export default function Map({sightings}) {
               key={`sighting-${cluster.properties.sightingId}`}
               lat={latitude}
               lng={longitude}
+              onClick= {console.log('click')}
               >
-              <div className='location-marker' style={{backgroundColor: "#FF0000"}}>
-               <img src={alienImage} alt='they are out there'></img>
-              </div>
-           
+                <div className='location-marker' id='location-marker' style={{backgroundColor: "#FF0000"}}>
+                  <img src={alienImage} alt='they are out there' onClick={() => setLocationInfo({ id: sightingId, text: text})}></img>
+                </div>
+                
             </Marker>
           );
           }
         })}
-      
+        {locationInfo && <LocationInfo info={locationInfo} />}
       </GoogleMapReact>
     </div>
   );
