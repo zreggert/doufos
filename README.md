@@ -14,10 +14,10 @@ This project, DOUFUS, is an database site that features an interactive map that 
 
 ## Visuals
 
-![screenshot1](./assets/home1.JPG)
-![screenshot2](./assets/map1.JPG)
-![screenshot3](./assets/signup1.JPG)
-![screenshot4](./assets/signin1.JPG)
+![screenshot1](./assets/home1.jpg)
+![screenshot2](./assets/map1.jpg)
+![screenshot3](./assets/signup1.jpg)
+![screenshot4](./assets/signin1.jpg)
 
 ## Installation
 
