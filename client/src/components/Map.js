@@ -41,7 +41,7 @@ export default function Map({sightings}) {
   return (
     <div style={{ height: "70vh", width: "96vw",minHeight:'600px', margin: "20px auto 20px auto"}} id='googleMap'>
       <GoogleMapReact
-        bootstrapURLKeys={{ key: AIzaSyAbNcA9s_aEzSfXXDPc1CGnCJirwRdNvpo }}
+        bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_MAPS_KEY}}
         defaultCenter={{ lat: 39.8283, lng: -98.5795 }}
         defaultZoom={4}
         options={{styles: [
