@@ -63,8 +63,8 @@ Have a high-quality README (with unique name, description, technologies used, sc
 
 ## Authors and acknowledgment
 
-- Scott Erwin - Javascript, Models, Routes, Seeds, Database, HTML, CSS, Software Deployment, Design and Assets Creation
-- Richard Crippen - Javascript, Models, Routes, Seeds, Database, Design Feedback, and Code Reviews
-- Zachary Eggert - Javascript, Routes and Models
-- Winsor Sineus - JavaScript, Routes, Form Management
-- Sarah Martin - Agile Roadmap and Asset Management
+- Scott Erwin | email: scottallenerwin@gmail.com - Javascript, Models, Routes, Seeds, Database, HTML, CSS, Software Deployment, Design and Assets Creation
+- Richard Crippen | email: richardcrippen@gmail.com - Javascript, Models, Routes, Seeds, Database, Design Feedback, and Code Reviews
+- Zachary Eggert | email: zreggert@gmail.com - Javascript, Routes and Models
+- Winsor Sineus | email: sineusw@gmail.com - JavaScript, Routes, Form Management
+- Sarah Martin | email: sv7337@outlook.com - Agile Roadmap and Asset Management
