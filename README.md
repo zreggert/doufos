@@ -1,10 +1,10 @@
-# Project-3: DOUFUS
+# Project-3: DOUFOS
 
 ## Description
 
 The main objective in this project was to build an application with MERN, Feact, Express, MySQL, MongoDB and GraphQL.
 
-This project, DOUFUS, is an database site that features an interactive map that document UFO sightings. Users can view all sightings reported on the map, as well as sign up to join and report their own sightings.
+This project, DOUFOS, is an database site that features an interactive map that document UFO sightings. Users can view all sightings reported on the map, as well as sign up to join and report their own sightings.
 
 ## link to deployed application
 
